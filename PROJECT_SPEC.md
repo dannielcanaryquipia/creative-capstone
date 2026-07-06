@@ -224,7 +224,7 @@ Shared components use `group-hover` Tailwind pattern for hover micro-interaction
 - `RESOURCES_BY_WEEK.md` — full resource table by week
 - `RESOURCES_BY_WEEK_guide.md` — detailed guide with notes on missing URLs
 - `files-by-week/` — source .txt files (weeks 2–7)
-- `pdf-files/` — attached PDF readings (7 files)
+- `public/pdf-files/` — attached PDF readings (6 files)
 - `src/` — React application source
 - `src/image/profile.jpg` — profile photo (Alvin Valeza)
 - `src/hooks/usePageEnter.ts` — shared GSAP entrance/scroll hook

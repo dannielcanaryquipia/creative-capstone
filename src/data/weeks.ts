@@ -6,7 +6,6 @@ export interface WeekEntry {
   followUpQuestion: string;
   reflection: string;
   references: string[];
-  pdfUrl: string | null;
   status: "ready" | "pending";
   quiet?: boolean;
   accentColor?: string;
@@ -32,7 +31,6 @@ This learning path reshapes the idea of citizenship, moving it from a passive na
       "Better World Handbook — Building a Better World",
       "Week 2 course material — Global Citizenship",
     ],
-    pdfUrl: null,
     status: "ready",
     accentColor: "#3B8B5C",
   },
@@ -55,7 +53,6 @@ This learning journey highlights deep connection, the strength of collective act
       "Better World Handbook — Building a Better World",
       "Week 3 course material",
     ],
-    pdfUrl: null,
     status: "ready",
   },
   {
@@ -78,7 +75,6 @@ This course shows how overlapping privilege and injustice shape our lives, and h
       "Intersectionality — Kimberlé Crenshaw",
       "Week 4 course material",
     ],
-    pdfUrl: null,
     status: "ready",
   },
   {
@@ -109,7 +105,6 @@ This course challenges hidden prejudice, builds cultural empathy, and promotes g
       "Better World Handbook — Social Justice",
       "Week 5 course material",
     ],
-    pdfUrl: null,
     status: "ready",
   },
   {
@@ -140,7 +135,6 @@ These lessons help us become better citizens by building a framework of shared r
       "Our Sisters in Spirit — documentary",
       "Week 6 course material",
     ],
-    pdfUrl: null,
     status: "ready",
     quiet: true,
     accentColor: "#6B7B70",
@@ -161,7 +155,6 @@ The most important lesson from this course is that colonial systems, past and pr
       "Our Sisters in Spirit — documentary",
       "Week 7 course material",
     ],
-    pdfUrl: null,
     status: "ready",
     quiet: true,
     accentColor: "#6B7B70",
@@ -174,7 +167,6 @@ The most important lesson from this course is that colonial systems, past and pr
     followUpQuestion: "",
     reflection: "",
     references: [],
-    pdfUrl: null,
     status: "pending",
   },
   {
@@ -185,7 +177,6 @@ The most important lesson from this course is that colonial systems, past and pr
     followUpQuestion: "",
     reflection: "",
     references: [],
-    pdfUrl: null,
     status: "pending",
   },
   {
@@ -196,7 +187,6 @@ The most important lesson from this course is that colonial systems, past and pr
     followUpQuestion: "",
     reflection: "",
     references: [],
-    pdfUrl: null,
     status: "pending",
   },
   {
@@ -207,7 +197,6 @@ The most important lesson from this course is that colonial systems, past and pr
     followUpQuestion: "",
     reflection: "",
     references: [],
-    pdfUrl: null,
     status: "pending",
   },
   {
@@ -218,7 +207,6 @@ The most important lesson from this course is that colonial systems, past and pr
     followUpQuestion: "",
     reflection: "",
     references: [],
-    pdfUrl: null,
     status: "pending",
   },
 ];
