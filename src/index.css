@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #02342d;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1f4b43;
+  --color-on-primary-container: #8dbdaf;
+  --color-secondary: #9e4126;
+  --color-secondary-container: #ff8b6a;
+  --color-on-secondary-container: #75230b;
+  --color-secondary-fixed: #ffdbd1;
+  --color-secondary-fixed-dim: #ffb5a0;
+  --color-background: #fdf9f2;
+  --color-surface: #fdf9f2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f7f3ec;
+  --color-surface-container: #f1ede6;
+  --color-surface-container-high: #ebe8e1;
+  --color-surface-container-highest: #e6e2db;
+  --color-on-surface: #1c1c18;
+  --color-text-muted: #4a473f;
+  --color-outline: #717976;
+  --color-outline-variant: #c0c8c5;
+  --color-tertiary-fixed-dim: #f5bd58;
+  --color-forest-accent: #3b8b5c;
+  --color-sage-muted: #6b7b70;
+  --color-tertiary-container: #5b3f00;
+  --color-on-tertiary-container: #dea845;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-card: 0.75rem;
+  --radius-btn: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+}
+
+::selection {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
