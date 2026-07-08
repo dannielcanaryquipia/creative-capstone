@@ -11,10 +11,6 @@ export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
   usePageEnter(ref);
 
-  const readyWeeks = weeks.filter((w) => w.status === "ready");
-  const pendingWeeks = weeks.filter((w) => w.status === "pending");
-  const accentRotation = ["#1F4B43", "#3B8B5C", "#D9A441", "#9E4126"];
-
   return (
     <div ref={ref}>
       <Hero
@@ -76,38 +72,16 @@ export default function Home() {
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {readyWeeks.map((w, i) => (
+            {weeks.map((w) => (
               <WeekPreviewCard
                 key={w.number}
                 number={w.number}
                 date={w.date}
                 title={w.title}
-                status={w.status}
-                quiet={w.quiet}
-                accentColor={accentRotation[i % accentRotation.length]}
-              />
-            ))}
-            {pendingWeeks.map((w) => (
-              <WeekPreviewCard
-                key={w.number}
-                number={w.number}
-                date={w.date}
-                title={w.title}
-                status={w.status}
-                quiet={w.quiet}
               />
             ))}
           </div>
 
-          <div className="fade-in mt-12 flex justify-center" style={{ y: 24, opacity: 0 }}>
-            <Link
-              to="/journey"
-              className="group inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-3.5 rounded-lg font-medium hover:bg-primary-container transition-all duration-300 active:scale-[0.97]"
-            >
-              <span>View full journey</span>
-              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5" />
-            </Link>
-          </div>
         </div>
       </section>
 

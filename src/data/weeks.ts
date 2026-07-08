@@ -6,9 +6,6 @@ export interface WeekEntry {
   followUpQuestion: string;
   reflection: string;
   references: string[];
-  status: "ready" | "pending";
-  quiet?: boolean;
-  accentColor?: string;
 }
 
 export const weeks: WeekEntry[] = [
@@ -31,8 +28,6 @@ This learning path reshapes the idea of citizenship, moving it from a passive na
       "Better World Handbook — Building a Better World",
       "Week 2 course material — Global Citizenship",
     ],
-    status: "ready",
-    accentColor: "#3B8B5C",
   },
   {
     number: 3,
@@ -53,7 +48,6 @@ This learning journey highlights deep connection, the strength of collective act
       "Better World Handbook — Building a Better World",
       "Week 3 course material",
     ],
-    status: "ready",
   },
   {
     number: 4,
@@ -75,7 +69,6 @@ This course shows how overlapping privilege and injustice shape our lives, and h
       "Intersectionality — Kimberlé Crenshaw",
       "Week 4 course material",
     ],
-    status: "ready",
   },
   {
     number: 5,
@@ -105,7 +98,6 @@ This course challenges hidden prejudice, builds cultural empathy, and promotes g
       "Better World Handbook — Social Justice",
       "Week 5 course material",
     ],
-    status: "ready",
   },
   {
     number: 6,
@@ -135,9 +127,6 @@ These lessons help us become better citizens by building a framework of shared r
       "Our Sisters in Spirit — documentary",
       "Week 6 course material",
     ],
-    status: "ready",
-    quiet: true,
-    accentColor: "#6B7B70",
   },
   {
     number: 7,
@@ -155,58 +144,108 @@ The most important lesson from this course is that colonial systems, past and pr
       "Our Sisters in Spirit — documentary",
       "Week 7 course material",
     ],
-    status: "ready",
-    quiet: true,
-    accentColor: "#6B7B70",
   },
   {
     number: 8,
     date: "June 22",
     title: "Entrepreneurship & Technology",
-    intro: "",
-    followUpQuestion: "",
-    reflection: "",
-    references: [],
-    status: "pending",
+    intro:
+      "Entrepreneurship and technology are key tools for addressing today's environmental, social, and economic challenges. Technology provides technical viability — renewable energy solutions, ocean-cleaning methods — while entrepreneurship adds economic viability, building businesses free of corruption, focused on long-term stability, fair pay, and safe working conditions.",
+    followUpQuestion:
+      "How can we redesign innovation to prioritize environmental life-promotion alongside human needs and economic viability?",
+    reflection: `Entrepreneurship, Technology, and Innovation for a Sustainable Future
+
+Entrepreneurship and technology are key tools for addressing today's environmental, social, and economic challenges. Technology provides technical viability by creating systems and innovations — such as renewable energy solutions or ocean-cleaning methods — that help us live within the Earth's limits and stop "borrowing from the future." Entrepreneurship adds the economic viability component of sustainability. It is defined not only by profit but by building businesses free of corruption, focused on long-term stability, fair pay, and safe working conditions. Together, these frameworks show how innovation and ethical enterprise can drive sustainable progress.
+
+The critical point where entrepreneurship and technology meet is innovation. Traditionally, "good" innovation was defined as balancing human needs, technological possibility, and economic viability. But this model often assumed unlimited natural resources and ignored the limits of ecosystems. To move forward, creativity must add a fourth pillar: environmental life-promotion. True innovation should ask, "How much life does this support?" rather than simply aiming to reduce harm. This means giving nature a real voice early in the design process — symbolically, "a seat at the table" — so that every solution promotes life instead of just minimizing damage.
+
+Promoting Sustainable Practices and Personal Growth
+
+To promote sustainability in everyday life, we need to connect the three circles of sustainability — environmental, social, and economic — like the noodles, sauce, and bowl of a spaghetti dinner.
+
+At Home: People can shift from over-consumption to less wasteful living while staying alert to "greenwashing," where companies misuse the word sustainability to sell harmful products.
+At School: Students can move from human-centered design thinking to eco-centric approaches, acting as voices for non-human stakeholders to ensure projects truly support life.
+At Work: Organizations must look beyond short-term growth and create services that restore ecosystems — such as reforesting or cleaning waterways — while maintaining economic stability and social fairness.
+
+The most important lesson from this course is the shift from a human-centered mindset to one that supports all life. Adopting this perspective encourages growth both personally and professionally. As students, it provides a framework for questioning existing practices instead of accepting them as fixed. As professionals, it highlights the need to identify overlooked stakeholders early and redefine success to focus on long-term stability, fair wages, and avoiding greenwashing. As citizens, it reminds us that human survival depends on the survival of other life forms on our limited planet. This awareness helps us meet our needs without threatening the needs of future generations.`,
+    references: ["Week 8 course material"],
   },
   {
     number: 9,
     date: "June 29",
     title: "Ecological Literacy (Part 1)",
-    intro: "",
-    followUpQuestion: "",
-    reflection: "",
-    references: [],
-    status: "pending",
+    intro:
+      "Ecological literacy (ecoliteracy) is the ability to apply knowledge of how natural systems work to support human societies. It calls for moving away from a wasteful, extractive mindset toward a regenerative culture that mirrors nature's patterns: networks, nested systems, and closed-loop cycles where waste does not exist.",
+    followUpQuestion:
+      "How does ecological literacy reframe our relationship with natural systems and challenge extractive economic models?",
+    reflection: `The most important lesson I took from this class is ecological literacy, or ecoliteracy — the ability to apply knowledge of how natural systems work to support human societies. It calls for moving away from a wasteful, extractive mindset toward a regenerative culture that mirrors nature's patterns: networks, nested systems, and closed-loop cycles where "waste" does not exist. This is especially urgent, since if North America's resource-intensive lifestyle were adopted globally, we would need four Earths to sustain it.
+
+As a student, ecoliteracy provides a framework for systems thinking, linking concepts like nested systems with tools such as Water Footprint Assessment to measure sustainability and justice. Professionally, it encourages a shift toward a circular economy through principles like Extended Producer Responsibility and Cradle-to-Cradle design, urging manufacturers to use renewable energy and recyclable, non-toxic materials to reduce impacts like grey water footprints.
+
+As a citizen, it raises awareness of global issues such as species extinction and aquifer depletion, inspiring collaboration and "deep democracy" to hold governments and businesses accountable — much like the successful international effort to heal the ozone layer through the Montreal Protocol.`,
+    references: ["Week 9 course material"],
   },
   {
     number: 10,
     date: "July 6",
     title: "Ecological Literacy (Part 2)",
-    intro: "",
-    followUpQuestion: "",
-    reflection: "",
-    references: [],
-    status: "pending",
+    intro:
+      "Ecological literacy reminds us that humans are not separate from nature but part of larger living systems that we depend on and influence with every action. This perspective leads toward Deep Ecology — the belief that all life has intrinsic value — and encourages systems thinking to recognize the long-term impacts of industrialization.",
+    followUpQuestion:
+      "How does Deep Ecology challenge us to recognize the intrinsic value of all life, and what does systems thinking reveal about the true costs of industrialization?",
+    reflection: `Ecological literacy is a vital life skill because it reminds us that humans are not separate from nature but part of larger living systems that we depend on and influence with every action. This perspective leads toward Deep Ecology — the belief that all life has intrinsic value — and encourages systems thinking to recognize long-term impacts of industrialization and address today's environmental crises.
+
+As students, it fosters active learning by uncovering the "true costs" of social norms, showing how diversity builds resilience, and introducing biomimicry as a way to design human infrastructure in harmony with nature. As professionals, it calls for sustainability over unchecked growth, supply chain accountability to avoid exploitation and environmental harm, and cooperative leadership to reach the critical mass needed for systemic change.
+
+As citizens, it inspires ethical reflection on the global impact of personal choices, builds an "inner ecology" that includes non-human beings and future generations, and encourages practical actions — like reducing carbon footprints, supporting local organic businesses, and restoring habitats — to help repair the planet's capacity and truly be the change.`,
+    references: ["Week 10 course material"],
   },
   {
     number: 11,
     date: "July 13",
     title: "Health and Wellness (Part 1)",
-    intro: "",
-    followUpQuestion: "",
-    reflection: "",
-    references: [],
-    status: "pending",
+    intro:
+      "Wellness is not a fixed destination or simply the absence of illness, but a dynamic lifestyle and ongoing process aimed at achieving health, vitality, and meaning. The Wellness Continuum shows that it is natural to move between lower and higher levels of wellness depending on life circumstances.",
+    followUpQuestion:
+      "How does the Wellness Continuum show that progress — not perfection — is the real goal of a holistic well-being journey?",
+    reflection: `The most important lesson from this course is that wellness is not a fixed destination or simply the absence of illness, but a dynamic lifestyle and ongoing process aimed at achieving health, vitality, and meaning. The Wellness Continuum shows that it is natural to move between lower and higher levels of wellness depending on life circumstances. The real goal is steady progress — "two steps forward and sometimes one step back" — rather than perfection. Because the nine dimensions of wellness — physical, emotional, intellectual, interpersonal, cultural, spiritual, environmental, financial, and occupational — are interconnected, daily choices in one area create positive ripple effects across the others. This makes wellness a holistic journey of continuous growth.
+
+This framework supports growth across three main areas of life.
+
+As a student: Intellectual wellness becomes a pursuit of learning that builds resilience and serves as a stepping stone to future occupational and financial success.
+
+As a professional: Occupational wellness is strengthened through lifelong learning, positive workplace relationships, and a fulfilling career. Physical and emotional stamina are also emphasized as key to professional performance.
+
+As a citizen: Cultural wellness fosters appreciation for diversity and rejection of prejudice, expanding interpersonal wellness through empathy and contribution. Environmental wellness is advanced through conscious choices — like recycling or carpooling — that reduce one's impact on the planet.`,
+    references: ["Week 11 course material"],
   },
   {
     number: 12,
     date: "July 20",
     title: "Health and Wellness (Part 2)",
-    intro: "",
-    followUpQuestion: "",
-    reflection: "",
-    references: [],
-    status: "pending",
+    intro:
+      "The Stages of Change Model (Transtheoretical Model) offers a practical roadmap for moving from lower to higher levels of well-being while navigating the natural ups and downs of the journey. Paired with the SMART Framework, abstract wellness goals become concrete, sustainable practices.",
+    followUpQuestion:
+      "How do SMART goals and the Stages of Change work together to create sustainable, long-term health improvements?",
+    reflection: `Understanding the "Stages of Change"
+
+The Stages of Change Model (Transtheoretical Model) offers a practical roadmap for moving from lower to higher levels of well-being while navigating the natural ups and downs of the journey. Change can be difficult because it disrupts routines, so moving from Pre-contemplation to Contemplation often requires a trigger — like learning about health risks — that sparks self-reflection.
+
+Preparation involves both planning and inner work, especially building confidence and commitment. The Action stage is sensitive, as new habits are tested against daily pressures, making support networks and motivational tools essential. Maintenance, usually after six months, requires ongoing effort to prevent relapse and create a support system that makes healthy living easier.
+
+The key lesson is that lasting external change depends on internal attitude shifts. Because the model is flexible, people can enter the cycle at any stage and continue improving their quality of life.
+
+SMART Goals and Reflective Practice
+
+The Stages of Change model can be paired with the SMART Framework to turn abstract goals into concrete practices that improve well-being. SMART goals ensure that objectives are Specific and clearly defined, Measurable so progress can be tracked, Attainable within current limits, Relevant to broader life priorities, and Time-bound with deadlines that keep focus and urgency. Together, these frameworks provide both a roadmap for personal change and a structure for setting goals that are realistic and sustainable. This combination helps people move steadily from lower to higher levels of wellness while staying motivated and accountable.
+
+SMART goals naturally align with each Stage of Change. During Contemplation, they guide research and reflection. In Preparation, they help organize plans and build confidence. In Action, they provide measurable objectives that keep progress focused and realistic. Reflective Practice — regularly reviewing successes, obstacles, and adjustments — makes this process stronger. By combining SMART goal-setting, stage-appropriate behaviors, and ongoing reflection, people create a continuous cycle of personal growth and sustainable health improvement.
+
+Course Reflection: Sustainable Change and Multi-Dimensional Growth
+
+The most important lesson from this course is that sustainable change is a deliberate, step-by-step process built on self-awareness and a strong foundation — it doesn't happen overnight. Combining the SMART framework with the Stages of Change helps people meet themselves where they are, whether reflecting in Contemplation or building momentum in Action, and turn broad goals into focused ones that are Specific, Measurable, Achievable, Relevant, and Time-bound.
+
+This mix of practical organization and psychological readiness supports growth in all areas of life. As a student, it helps set realistic academic or behavioral goals while using reflection to overcome obstacles before they affect performance. As a professional, it ensures goals align with long-term career priorities so demanding schedules don't undermine personal well-being. As a citizen, it frames wellness as a shared, interconnected system, encouraging people to spread these tools within their communities to build a cooperative, resilient society.`,
+    references: ["Week 12 course material"],
   },
 ];
