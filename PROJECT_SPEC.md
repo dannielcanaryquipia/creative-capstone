@@ -86,7 +86,7 @@ All weeks render identically — no "quiet" or "pending" variants.
 
 ### Documentation
 1. Hero — title + subtitle describing the behind-the-scenes process
-2. 3-phase gallery — Planning (6 images), Development (3 images), Output (5 images), each in a responsive grid (`sm:grid-cols-2 lg:grid-cols-3`) with hover lift and border shift
+2. 3-phase gallery — Planning (6 images), Development (3 images), Output (6 images), each in a responsive grid (`sm:grid-cols-2 lg:grid-cols-3`) with hover lift and border shift
 3. ImageLightbox — click any thumbnail for fullscreen zoom
 4. CTA into Journey
 5. External links row — GitHub source + Vercel live site (opens in new tab)
@@ -214,7 +214,7 @@ src/
     weeks.ts                   — 11 fully-populated WeekEntry objects (weeks 2–12)
     capstone.ts                — profile, course context, tech stack, philosophy, methodology
     resources.ts               — 37 ResourceEntry objects tagged by weekNumber (8 without URLs)
-    documentation.ts           — 3 DocPhase entries with 14 DocImage items (planning + dev + output)
+    documentation.ts           — 3 DocPhase entries with 15 DocImage items (planning + dev + output)
 ```
 
 ---
@@ -230,7 +230,7 @@ src/
 - `public/icons.svg` — additional icon assets
 - `src/` — React application source
 - `src/image/` — profile.jpg + IMG_4042.jpeg + IMG_4074.jpeg (About page gallery)
-- `src/image/documentation/` — 14 doc screenshots (6 planning + 3 dev + 5 output)
+- `src/image/documentation/` — 15 doc screenshots (6 planning + 3 dev + 6 output)
 
 ---
 

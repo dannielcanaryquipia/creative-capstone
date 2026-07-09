@@ -44,6 +44,7 @@ export const phases: DocPhase[] = [
       { filename: "output-about.jpg", caption: "About page with 3D background", alt: "About page screenshot" },
       { filename: "output-journey.jpg", caption: "Journey page — week-by-week reflections", alt: "Journey page screenshot" },
       { filename: "output-resources.jpg", caption: "Resources page", alt: "Resources page screenshot" },
+      { filename: "output-documentation.jpg", caption: "Documentation page — build process gallery", alt: "Documentation page screenshot" },
       { filename: "output-dark.jpg", caption: "Dark mode — theme toggle active", alt: "Dark mode screenshot" },
     ],
   },
