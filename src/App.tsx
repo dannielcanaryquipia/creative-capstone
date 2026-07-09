@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Journey from "./pages/Journey";
 import Resources from "./pages/Resources";
+import Documentation from "./pages/Documentation";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/documentation" element={<Documentation />} />
         </Routes>
       </main>
       <Footer />
