@@ -84,33 +84,6 @@ export default function Home() {
 
         </div>
       </section>
-
-      <section className="fade-in bg-surface-container-lowest border-t border-outline-variant/20 py-16 md:py-20 px-6" style={{ y: 24, opacity: 0 }}>
-        <div className="max-w-6xl mx-auto text-center space-y-6">
-          <h2 className="font-display text-2xl md:text-3xl tracking-tight text-primary max-w-2xl mx-auto">
-            Ready to dive into the verbatim reflections?
-          </h2>
-          <p className="text-sm md:text-base text-text-muted max-w-xl mx-auto leading-relaxed">
-            Experience the full narrative, including detailed week-by-week analysis, academic resources, and quiet meditation segments.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-            <Link
-              to="/journey"
-              className="group inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-3.5 rounded-lg font-medium hover:bg-primary-container transition-all duration-300 active:scale-[0.97]"
-            >
-              <span>View Full Journey</span>
-              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5" />
-            </Link>
-            <Link
-              to="/resources"
-              className="group inline-flex items-center gap-2 border border-primary text-primary px-8 py-3.5 rounded-lg font-medium bg-transparent hover:bg-primary/5 transition-all duration-300 active:scale-[0.97]"
-            >
-              <span>Resource Archive</span>
-              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5" />
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

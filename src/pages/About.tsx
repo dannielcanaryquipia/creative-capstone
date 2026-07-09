@@ -1,18 +1,24 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/shared/Hero";
+import AboutBackground3D from "../components/AboutBackground3D";
+import ImageLightbox from "../components/shared/ImageLightbox";
 import { capstone } from "../data/capstone";
 import { ArrowRight, Code } from "@phosphor-icons/react";
+import img1 from "../image/IMG_4042.jpeg";
+import img2 from "../image/IMG_4074.jpeg";
 import { usePageEnter } from "../hooks/usePageEnter";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
   usePageEnter(ref);
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   return (
     <div ref={ref} className="relative">
-      {/* 3D-ish animated background */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+      <AboutBackground3D />
+
+      <div className="fixed inset-0 pointer-events-none overflow-hidden -z-20 md:hidden">
         <div className="absolute top-1/4 left-[10%] w-72 h-72 bg-primary-container/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "8s" }} />
         <div className="absolute top-3/4 right-[15%] w-96 h-96 bg-secondary-fixed-dim/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "12s" }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-outline-variant/20 rounded-full" />
@@ -44,6 +50,15 @@ export default function About() {
               <p className="text-sm text-text-muted leading-relaxed">
                 This capstone is presented as an interactive webpage rather than a traditional document, allowing each week to exist as its own moment while remaining part of a continuous scroll — mirroring the cumulative nature of the learning journey itself.
               </p>
+            </div>
+
+            <div className="fade-in grid grid-cols-2 gap-4" style={{ y: 24, opacity: 0 }}>
+              <button onClick={() => setLightboxSrc(img1)} className="rounded-xl overflow-hidden bg-surface-container-high aspect-[4/3] cursor-pointer group">
+                <img src={img1} alt="Alvin Valeza" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+              </button>
+              <button onClick={() => setLightboxSrc(img2)} className="rounded-xl overflow-hidden bg-surface-container-high aspect-[4/3] cursor-pointer group">
+                <img src={img2} alt="Alvin Valeza" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+              </button>
             </div>
 
             <div className="fade-in" style={{ y: 24, opacity: 0 }}>
@@ -118,6 +133,14 @@ export default function About() {
           </Link>
         </div>
       </section>
+
+      {lightboxSrc && (
+        <ImageLightbox
+          src={lightboxSrc}
+          alt="Alvin Valeza"
+          onClose={() => setLightboxSrc(null)}
+        />
+      )}
     </div>
   );
 }

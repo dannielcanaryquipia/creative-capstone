@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import WeekSection from "../components/journey/WeekSection";
-import JourneyProgress from "../components/journey/JourneyProgress";
 import { weeks } from "../data/weeks";
 import { usePageEnter } from "../hooks/usePageEnter";
 
@@ -30,10 +29,6 @@ export default function Journey() {
       {weeks.map((week) => (
         <WeekSection key={week.number} week={week} />
       ))}
-
-      {weeks.length > 0 && <div className="border-t border-outline-variant/20" />}
-
-      <JourneyProgress />
     </div>
   );
 }

@@ -114,8 +114,8 @@ export default function Resources() {
                           </div>
                           <div className="flex items-center gap-3 shrink-0">
                             {!hasUrl && (
-                              <span className="text-[10px] uppercase tracking-wider text-secondary/60 font-medium whitespace-nowrap">
-                                Pending
+                              <span className="text-[10px] uppercase tracking-wider text-text-muted/30 font-medium whitespace-nowrap">
+                                No link
                               </span>
                             )}
                             {hasUrl && (

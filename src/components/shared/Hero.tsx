@@ -32,7 +32,7 @@ export default function Hero({
           </div>
         )}
       </div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-2/3 bg-primary-container opacity-5 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-2/3 bg-primary-container opacity-10 md:opacity-5 blur-3xl pointer-events-none" />
     </section>
   );
 }

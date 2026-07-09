@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ThemeToggle from "../ThemeToggle";
 
 const links = [
   { to: "/about", label: "About" },
@@ -32,8 +33,8 @@ export default function NavBar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-primary/95 backdrop-blur-md shadow-sm"
-            : "bg-primary"
+            ? "bg-primary/95 backdrop-blur-md shadow-sm dark:bg-white/[0.06] dark:backdrop-blur-2xl dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] dark:border-b dark:border-white/[0.08]"
+            : "bg-primary dark:bg-white/[0.03] dark:backdrop-blur-xl"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -65,21 +66,25 @@ export default function NavBar() {
                 />
               </Link>
             ))}
+            <ThemeToggle />
           </div>
 
-          <button
-            className={`md:hidden text-on-primary p-1 transition-opacity duration-300 ${
-              menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"
-            }`}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button
+              className={`text-on-primary p-1 transition-opacity duration-300 ${
+                menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+              }`}
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <line x1="3" y1="5" x2="21" y2="5" />
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="19" x2="21" y2="19" />
             </svg>
           </button>
+          </div>
         </div>
       </nav>
 
@@ -93,7 +98,7 @@ export default function NavBar() {
 
       {/* Mobile side panel — rendered outside <nav> */}
       <div
-        className={`md:hidden fixed top-0 left-0 h-full w-[85vw] bg-primary z-50 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+        className={`md:hidden fixed top-0 left-0 h-full w-[85vw] bg-primary dark:bg-white/[0.04] dark:backdrop-blur-2xl dark:border-r dark:border-white/[0.06] z-50 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

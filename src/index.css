@@ -26,6 +26,7 @@
   --color-sage-muted: #6b7b70;
   --color-tertiary-container: #5b3f00;
   --color-on-tertiary-container: #dea845;
+  --color-btn-primary: #02342d;
 
   --font-display: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
@@ -47,6 +48,35 @@ body {
 ::selection {
   background-color: var(--color-secondary-container);
   color: var(--color-on-secondary-container);
+}
+
+.dark {
+  --color-primary: #ffffff;
+  --color-on-primary: #02342d;
+  --color-btn-primary: #4cc77a;
+  --color-primary-container: #2a5a52;
+  --color-on-primary-container: #ffffff;
+  --color-secondary: #ffffff;
+  --color-secondary-container: #9e4126;
+  --color-on-secondary-container: #ffffff;
+  --color-secondary-fixed: #9e4126;
+  --color-secondary-fixed-dim: #9e4126;
+  --color-background: #111111;
+  --color-surface: #111111;
+  --color-surface-container-lowest: #1a1a1a;
+  --color-surface-container-low: #222222;
+  --color-surface-container: #2a2a2a;
+  --color-surface-container-high: #333333;
+  --color-surface-container-highest: #3a3a3a;
+  --color-on-surface: #f0f0f0;
+  --color-text-muted: #bbbbbb;
+  --color-outline: #555555;
+  --color-outline-variant: #404040;
+  --color-tertiary-fixed-dim: #f5bd58;
+  --color-forest-accent: #4cc77a;
+  --color-sage-muted: #8d8d8d;
+  --color-tertiary-container: #5b3f00;
+  --color-on-tertiary-container: #dea845;
 }
 
 @keyframes float {
