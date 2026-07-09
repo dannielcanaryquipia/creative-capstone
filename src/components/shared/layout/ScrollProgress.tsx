@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { weeks } from "../../data/weeks";
+import { weeks } from "../../../data/weeks";
 
 export default function ScrollProgress() {
   const { pathname } = useLocation();

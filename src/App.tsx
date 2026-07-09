@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./components/layout/NavBar";
-import Footer from "./components/layout/Footer";
-import ScrollProgress from "./components/layout/ScrollProgress";
+import NavBar from "./components/shared/layout/NavBar";
+import Footer from "./components/shared/layout/Footer";
+import ScrollProgress from "./components/shared/layout/ScrollProgress";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Journey from "./pages/Journey";

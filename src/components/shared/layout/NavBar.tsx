@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ThemeToggle from "../ThemeToggle";
+import ThemeToggle from "../../ThemeToggle";
 
 const links = [
   { to: "/about", label: "About" },
@@ -33,8 +33,8 @@ export default function NavBar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-primary/95 backdrop-blur-md shadow-sm dark:bg-white/[0.06] dark:backdrop-blur-2xl dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] dark:border-b dark:border-white/[0.08]"
-            : "bg-primary dark:bg-white/[0.03] dark:backdrop-blur-xl"
+            ? "bg-primary/95 backdrop-blur-md shadow-sm"
+            : "bg-primary"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
