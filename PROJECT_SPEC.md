@@ -29,10 +29,11 @@ Home
  │     ├── Week 10 — Ecological Literacy (Part 2)
  │     ├── Week 11 — Health and Wellness (Part 1)
  │     └── Week 12 — Health and Wellness (Part 2)
+ ├── Documentation (3-phase gallery: planning, development, output screenshots; external GitHub + live site links)
  └── Resources (37 references grouped by week with type icons and Open links)
 ```
 
-Global nav (sticky): logo/name + About / Journey / Resources — desktop links with hover underline draw animation. On mobile, hamburger toggles a left-side sliding drawer (85vw, glass background in dark mode, staggered link entrance). Theme toggle (sun/moon) in nav. On the Journey page, a right-rail `ScrollProgress` component shows "Week N of 11" as the user scrolls.
+Global nav (sticky): logo/name + About / Journey / Documentation / Resources — desktop links with hover underline draw animation. On mobile, hamburger toggles a left-side sliding drawer (85vw, glass background in dark mode, staggered link entrance). Theme toggle (sun/moon) in nav. On the Journey page, a right-rail `ScrollProgress` component shows "Week N of 11" as the user scrolls.
 
 All weeks display with uniform styling — no status badges, no accent color rotation, no "quiet" mode. All weeks are completed and fully populated.
 
@@ -82,6 +83,13 @@ Each week section renders the full reflection text. Structure per week section:
 2. Full reflection text (multi-paragraph, `.reveal` staggered fade-rise via ScrollTrigger)
 
 All weeks render identically — no "quiet" or "pending" variants.
+
+### Documentation
+1. Hero — title + subtitle describing the behind-the-scenes process
+2. 3-phase gallery — Planning (6 images), Development (3 images), Output (5 images), each in a responsive grid (`sm:grid-cols-2 lg:grid-cols-3`) with hover lift and border shift
+3. ImageLightbox — click any thumbnail for fullscreen zoom
+4. CTA into Journey
+5. External links row — GitHub source + Vercel live site (opens in new tab)
 
 ### Resources
 Resources grouped by week (scroll-triggered fade-in) with sidebar week navigation. Each resource card shows:
@@ -148,6 +156,13 @@ All pages use this hook for:
 - Week sections: `.reveal` class staggered fade-rise via ScrollTrigger `onEnter` (stagger 0.1s)
 - Right-rail ScrollProgress indicator tracks position through all 11 weeks
 
+### Documentation
+- Hero staggered entrance
+- Phase sections: fade-in on scroll with `.fade-in` + inline y/opacity
+- Thumbnails: lift on hover (`hover:-translate-y-0.5`, border shift, image scale 1.05)
+- External link icons: scale on hover
+- ImageLightbox: fullscreen modal with backdrop blur and Escape key close
+
 ### Resources
 - Hero staggered entrance
 - Resource cards: fade-in on scroll + lift on hover with icon scale
@@ -190,6 +205,7 @@ src/
     Home.tsx                   — hero + core intent + week preview grid
     About.tsx                  — 3D bg + hero + context + gallery + philosophy + tech cards + sidebar + CTA
     Journey.tsx                — hero + 11 WeekSection components + ScrollProgress
+    Documentation.tsx          — hero + 3-phase gallery grid (planning/dev/output) with ImageLightbox + external GitHub/live links
     Resources.tsx              — hero + sidebar nav + resource cards grouped by week
   hooks/
     usePageEnter.ts            — shared hook: GSAP hero entrance + ScrollTrigger fade-in reveals
@@ -198,6 +214,7 @@ src/
     weeks.ts                   — 11 fully-populated WeekEntry objects (weeks 2–12)
     capstone.ts                — profile, course context, tech stack, philosophy, methodology
     resources.ts               — 37 ResourceEntry objects tagged by weekNumber (8 without URLs)
+    documentation.ts           — 3 DocPhase entries with 14 DocImage items (planning + dev + output)
 ```
 
 ---
@@ -213,6 +230,7 @@ src/
 - `public/icons.svg` — additional icon assets
 - `src/` — React application source
 - `src/image/` — profile.jpg + IMG_4042.jpeg + IMG_4074.jpeg (About page gallery)
+- `src/image/documentation/` — 14 doc screenshots (6 planning + 3 dev + 5 output)
 
 ---
 
